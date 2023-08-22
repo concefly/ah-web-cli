@@ -1,0 +1,34 @@
+{
+  "name": "ah-web-cli",
+  "version": "2.2.12",
+  "files": [
+    "dist"
+  ],
+  "bin": "./dist/cli.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
+  },
+  "dependencies": {
+    "ah-api-type": "^3.0.9",
+    "ah-logger": "^3.2.7",
+    "ali-oss": "^6.17.1",
+    "dotenv": "^16.0.3",
+    "glob": "^9.3.4",
+    "lodash": "^4.17.21",
+    "yamljs": "^0.3.0",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.7",
+    "@types/glob": "^8.1.0",
+    "@types/lodash": "^4.14.192",
+    "@types/yamljs": "^0.2.31",
+    "@types/yargs": "^17.0.24",
+    "prettier": "^3.0.2",
+    "release-it": "^16.1.5",
+    "typescript": "^5.0.3"
+  }
+}
